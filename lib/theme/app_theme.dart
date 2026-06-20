@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  // Couleurs principales - Event's AL
-  static const Color primaryColor = Color(0xFF1A237E);    // Bleu foncé
-  static const Color accentColor = Color(0xFFE53935);     // Rouge vif
-  static const Color goldColor = Color(0xFFFFB300);       // Or
-  static const Color backgroundColor = Color(0xFFF5F5F5); // Gris clair
+  static const Color primaryColor = Color(0xFF6C22A6);
+  static const Color accentColor = Color(0xFFFF6F00);
+  static const Color goldColor = Color(0xFFFFB300);
+  static const Color backgroundColor = Color(0xFFF8F9FA);
   static const Color cardColor = Colors.white;
-  static const Color textPrimary = Color(0xFF212121);
-  static const Color textSecondary = Color(0xFF757575);
+  static const Color textPrimary = Color(0xFF1A1A2E);
+  static const Color textSecondary = Color(0xFF6B7280);
 
   static ThemeData get lightTheme {
     return ThemeData(
@@ -47,8 +46,8 @@ class AppTheme {
       ),
       cardTheme: CardThemeData(
         color: cardColor,
-        elevation: 3,
-        shadowColor: Colors.black.withValues(alpha: 0.1),
+        elevation: 2,
+        shadowColor: Colors.black.withValues(alpha: 0.08),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
@@ -58,11 +57,11 @@ class AppTheme {
         fillColor: Colors.white,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: Color(0xFFE0E0E0)),
+          borderSide: const BorderSide(color: Color(0xFFE5E7EB)),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: Color(0xFFE0E0E0)),
+          borderSide: const BorderSide(color: Color(0xFFE5E7EB)),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
