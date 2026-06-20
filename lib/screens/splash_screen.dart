@@ -91,45 +91,18 @@ class _SplashScreenState extends State<SplashScreen>
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Logo
-                    Container(
-                      width: 120,
-                      height: 120,
-                      decoration: BoxDecoration(
+                    Image.asset(
+                      'assets/images/events_al_logo_new.png',
+                      width: 160,
+                      height: 160,
+                      fit: BoxFit.contain,
+                      errorBuilder: (context, error, stack) => const Icon(
+                        Icons.event,
+                        size: 80,
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(24),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withValues(alpha: 0.3),
-                            blurRadius: 20,
-                            offset: const Offset(0, 8),
-                          ),
-                        ],
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(24),
-                        child: Image.asset(
-                          'assets/images/events_al_logo_new.png',
-                          fit: BoxFit.contain,
-                          errorBuilder: (context, error, stack) => const Icon(
-                            Icons.event,
-                            size: 60,
-                            color: AppTheme.primaryColor,
-                          ),
-                        ),
                       ),
                     ),
-                    const SizedBox(height: 24),
-                    const Text(
-                      "Event's AL",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 36,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 2,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 16),
                     Text(
                       'Découvrez les événements culturels d\'Alger',
                       style: TextStyle(

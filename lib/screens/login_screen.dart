@@ -31,36 +31,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: const EdgeInsets.all(40),
                 child: Column(
                   children: [
-                    Container(
-                      width: 90,
-                      height: 90,
-                      decoration: BoxDecoration(
+                    Image.asset(
+                      'assets/images/events_al_logo_new.png',
+                      width: 120,
+                      height: 120,
+                      fit: BoxFit.contain,
+                      errorBuilder: (ctx, err, stack) => const Icon(
+                        Icons.event,
+                        size: 60,
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.asset(
-                          'assets/images/events_al_logo_new.png',
-                          fit: BoxFit.contain,
-                          errorBuilder: (ctx, err, stack) => const Icon(
-                            Icons.event,
-                            size: 50,
-                            color: AppTheme.primaryColor,
-                          ),
-                        ),
                       ),
                     ),
                     const SizedBox(height: 16),
-                    const Text(
-                      "Event's AL",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
                     Text(
                       'Connectez-vous à votre compte',
                       style: TextStyle(
